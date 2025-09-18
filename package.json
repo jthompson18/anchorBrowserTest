@@ -1,0 +1,21 @@
+{
+  "name": "bb-operator-researcher",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Anchor Browser + Playwright operator with Gemini drafting.",
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "postinstall": "npx playwright install chromium",
+    "start:anchor": "node --env-file=.env.local anchor_operator_researcher.mjs \"Impacts of microplastics on marine food webs\"",
+    "run:anchor": "node --env-file=.env.local anchor_operator_researcher.mjs",
+    "check": "node -v && npx playwright --version"
+  },
+  "dependencies": {
+    "anchorbrowser": "^0.1.0",
+    "@google/generative-ai": "^0.11.0",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.47.0",
+    "undici": "^6.19.8"
+  }
+}
